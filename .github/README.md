@@ -1,2 +1,2 @@
 # AmongUs-LoadingScreen
- The Among Us Gmod loading sceren.
+ The Among Us Gmod loading screen.
