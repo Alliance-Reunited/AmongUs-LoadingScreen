@@ -1,0 +1,25 @@
+name: Deploy CD
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
+        with:
+          username: '${{ secrets.SFTP_USERNAME }}'
+          server: '${{ secrets.SFTP_SERVER }}'
+          port: '${{ secrets.SFTP_PORT }}'
+          ssh_private_key: ${{ secrets.SFTP_PRIVKEY }} 
+          local_path: './src/*'
+          remote_path: '/var/www/sftp/gmod/amongus'
+          args: '-o ConnectTimeout=5'
