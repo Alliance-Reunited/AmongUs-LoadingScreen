@@ -1,0 +1,64 @@
+// Base particle.js code
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+canvas {
+    display: block;
+    vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+}
+// Time for our own code
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
+    img {
+        width: 15rem;
+        margin: auto;
+    }
+    margin: auto;
+    p {
+        margin: auto;
+        font-size: 2rem;
+        color: white;
+    }
+    span.imposter {
+        font-size: 2.3rem;
+        color: #e74c3c;
+    }
+    .sus {
+        font-size: 0.5rem;
+    }
+}
+.xmain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    width: 50rem;
+    animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
+    filter: drop-shadow(0 0 0.14rem black);
+}
+
+@keyframes animIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
