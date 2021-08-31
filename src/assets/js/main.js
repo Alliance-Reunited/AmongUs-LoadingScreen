@@ -23,6 +23,7 @@ const type = () => {
     if (letterIndex === curText.length) {
         textIndex++;
         letterIndex = 0;
+
         setTimeout(type, 1000);
         return;
     }
