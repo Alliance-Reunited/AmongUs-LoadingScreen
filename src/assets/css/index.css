@@ -12,7 +12,6 @@ canvas {
     display: block;
 }
 
-/* Particle.JS container */
 #particles-js {
     position: absolute;
     background-color: #202020;
