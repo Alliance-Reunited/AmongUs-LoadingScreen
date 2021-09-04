@@ -1,4 +1,4 @@
-name: Deploy CD
+name: CD
 
 on:
   push:
@@ -9,10 +9,25 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [16]
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
+
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Packages
+        run: yarn
+
+      - name: Build
+        run: yarn build
+
       - name: Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
@@ -20,6 +35,6 @@ jobs:
           server: '${{ secrets.SFTP_SERVER }}'
           port: '${{ secrets.SFTP_PORT }}'
           ssh_private_key: ${{ secrets.SFTP_PRIVKEY }} 
-          local_path: './src/*'
+          local_path: './dist/*'
           remote_path: '/var/www/sftp/gmod/amongus'
           args: '-o ConnectTimeout=5'
