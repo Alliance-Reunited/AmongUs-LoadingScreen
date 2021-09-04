@@ -23,14 +23,15 @@ canvas {
 
 .main {
     position: absolute;
+    text-align: center;
+
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    -webkit-animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
-    animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
+
     margin: auto;
+
+    transform: translate(-50%, -50%);
+    animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
 }
 
 .main img {
@@ -55,40 +56,25 @@ canvas {
 
 .xmain {
     position: absolute;
+    text-align: center;
+
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 50rem;
-    -webkit-animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
-    animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
-    -webkit-filter: drop-shadow(0 0 0.14rem black);
-    filter: drop-shadow(0 0 0.14rem black);
-}
 
-@-webkit-keyframes animIn {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50%, -5%);
-        transform: translate(-50%, -5%);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
+    width: 50rem;
+
+    transform: translate(-50%, -50%);
+    animation: animIn cubic-bezier(0.65, 0, 0.35, 1) 1s;
+    filter: drop-shadow(0 0 0.14rem black);
 }
 
 @keyframes animIn {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-50%, -5%);
         transform: translate(-50%, -5%);
     }
     100% {
         opacity: 1;
-        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
 }
