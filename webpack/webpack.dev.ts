@@ -1,8 +1,6 @@
 import merge from 'webpack-merge';
 import common from './webpack.common';
 
-import * as Webpack from 'webpack';
-
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 
 import * as path from 'path';
@@ -33,8 +31,7 @@ const config = merge(common, {
             inject: true,
             template: path.resolve(__dirname, `../public/index.html`),
             favicon: `./public/assets/img/logos/favicon.png`
-        }),
-        new Webpack.HotModuleReplacementPlugin()
+        })
     ],
 
     output: {

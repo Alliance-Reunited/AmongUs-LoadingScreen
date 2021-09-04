@@ -3,7 +3,7 @@ const texts = [
     `i saw you vented`,
     `i was rdmed in among us darkrp`,
     `thats kinda sus`,
-    `make sure to hide the fact you are sus`,
+    `make sure to hide the fact you are sus`
 ];
 
 let curText = ``;
@@ -12,7 +12,7 @@ let curLetter = ``;
 let textIndex = 0;
 let letterIndex = 0;
 
-const type = () => {
+const type = (): void => {
     if (textIndex === texts.length) textIndex = 0;
 
     curText = texts[textIndex];
@@ -31,6 +31,6 @@ const type = () => {
     setTimeout(type, 50);
 };
 
-window.onload = () => {
-    type();
-};
+const loadMessages = (): void => type();
+
+export default loadMessages;
