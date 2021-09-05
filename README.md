@@ -1,5 +1,5 @@
-<h1 align="center">alru.ga</h1>
-<h3 align="center">The Alliance Reunited website.</h3>
+<h1 align="center">Among Us Loading Screen</h1>
+<h3 align="center">The loading screen for the Among Us Garry's Mod edition.</h3>
 <br />
 
 ### Installing Dependencies
