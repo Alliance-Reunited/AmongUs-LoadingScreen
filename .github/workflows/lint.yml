@@ -27,4 +27,4 @@ jobs:
         run: yarn
 
       - name: Lint
-        run: yarn dev:lint
+        run: yarn dev:lint:ci
