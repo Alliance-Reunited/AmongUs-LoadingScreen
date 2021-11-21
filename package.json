@@ -1,7 +1,8 @@
 {
   "name": "@alliance-reunited/amongus-loadingscreen",
-  "version": "2.0.0",
   "description": "The loading screen for Garry's Mod Among Us.",
+  "packageManager": "yarn@3.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "build": "webpack --config ./webpack/webpack.prod.ts",
@@ -9,8 +10,8 @@
     "dev:lint": "eslint . --fix --ext .ts,.tsx"
   },
   "engines": {
-    "node": ">=16.6.0",
-    "yarn": ">=1.22"
+    "node": ">=16.10.0",
+    "yarn": ">=3.10.0"
   },
   "repository": {
     "type": "git",
@@ -44,7 +45,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.1.4",
-    "eslint": "^7.32.0",
+    "eslint": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
